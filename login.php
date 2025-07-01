@@ -27,7 +27,7 @@ if(isset($_SESSION['admin'])){
 
 
   <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-    <!-- Return to Home Button -->
+    
     <div class="absolute top-4 left-4">
       <a href="index.html" class="inline-flex items-center px-4 py-2 bg-gray-600 text-white text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors">
         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

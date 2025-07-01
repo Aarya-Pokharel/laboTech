@@ -1,5 +1,4 @@
--- LaboTech Database Schema with Sample Data
--- Create database if not exists
+
 CREATE DATABASE IF NOT EXISTS labotech_db;
 USE labotech_db;
 

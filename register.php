@@ -14,7 +14,7 @@ require_once 'includes/category-mapping.php';
 </head>
 
 <body class="bg-gray-50">
-    <!-- Return to Home Button -->
+   
     <div class="absolute top-4 left-4">
       <a href="index.html" class="inline-flex items-center px-4 py-2 bg-gray-600 text-white text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors">
         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -38,7 +38,7 @@ require_once 'includes/category-mapping.php';
                 </p>
             </div>
 
-            <!-- Registration Type Selection -->
+            
             <div class="bg-white rounded-lg shadow-md p-6">
                 <div class="mb-6">
                     <label class="block text-sm font-medium text-gray-700 mb-3">I want to register as:</label>
@@ -68,7 +68,7 @@ require_once 'includes/category-mapping.php';
                     </div>
                 </div>
 
-                <!-- Customer Registration Form -->
+                
                 <form id="customer-form" class="space-y-4" action="actions/register" method="POST">
                     <input type="hidden" name="user_type" value="customer">
                     
@@ -107,7 +107,7 @@ require_once 'includes/category-mapping.php';
                     </button>
                 </form>
 
-                <!-- Employee Registration Form -->
+                
                 <form id="employee-form" class="space-y-4 hidden" action="actions/register" method="POST">
                     <input type="hidden" name="user_type" value="employee">
                     
@@ -290,7 +290,7 @@ require_once 'includes/category-mapping.php';
     </style>
 
     <script>
-        // Category mapping for JavaScript
+      
         const categoryMapping = {
             'Unskilled Labor': ['Cleaning', 'Moving', 'Gardening', 'Driving', 'Security'],
             'Skilled Labor': ['Plumbing', 'Electrical', 'Carpentry', 'Painting', 'Repair', 'Installation', 'Cooking'],
@@ -341,7 +341,7 @@ require_once 'includes/category-mapping.php';
             }
         }
 
-        // Form validation
+    
         document.addEventListener('DOMContentLoaded', function() {
             const forms = document.querySelectorAll('form');
             

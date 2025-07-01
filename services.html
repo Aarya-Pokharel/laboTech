@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-gray-50 font-sans">
-  <!-- Navbar -->
+  
   <div class="bg-white">
 
 
@@ -46,9 +46,7 @@
             <span aria-hidden="true">→</span></a>
         </div>
       </nav>
-      <!-- Mobile menu, show/hide based on menu open state. -->
-
-      <!-- drawer component -->
+      
       <div id="drawer-navigation"
         class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-gray-800"
         tabindex="-1" aria-labelledby="drawer-navigation-label">
@@ -207,7 +205,7 @@
 
   </div>
 
-  <!-- Hero Section -->
+  
   <section class="pt-24 pb-8 bg-gradient-to-r from-yellow-100 to-blue-100 text-center" style="
     padding-top: 178px;
     height: 380px;
@@ -216,10 +214,10 @@
     <p class="text-lg text-gray-700">LaboTech connects you with a wide range of skilled and professional services.</p>
   </section>
 
-  <!-- Services Grid -->
+  
   <main class="max-w-6xl mx-auto py-12 px-4">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-      <!-- Service Cards -->
+      
       <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
         <img src="https://img.icons8.com/ios-filled/50/000000/electricity.png" alt="Electrician" class="h-10 mb-2">
         <h3 class="font-semibold text-lg mb-1">Electrician</h3>
@@ -331,7 +329,7 @@
     </div>
   </main>
 
-  <!-- Customer Feedback Section -->
+  
   <section class="max-w-4xl mx-auto py-12 px-4">
     <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">What Our Users Say</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -359,7 +357,7 @@
     </div>
   </section>
 
-  <!-- Feedback Section -->
+ 
   <section class="max-w-3xl mx-auto py-12 px-4">
     <h2 class="text-2xl font-bold text-gray-900 mb-4">Feedback</h2>
     <p class="text-gray-700 mb-4">We value your feedback! Please let us know your thoughts or suggestions.</p>
@@ -385,9 +383,48 @@
       <div class="text-gray-500 text-sm">© 2024 LaboTech. All rights reserved.</div>
     </div>
   </footer>
-  <!-- Code injected by live-server -->
+  
   <script type="text/javascript">
-    // <![CDATA[  <-- For SVG support
+  
+    if ('WebSocket' in window) {
+      (function () {
+        function refreshCSS() {
+          var sheets = [].slice.call(document.getElementsByTagName("link"));
+          var head = document.getElementsByTagName("head")[0];
+          for (var i = 0; i < sheets.length; ++i) {
+            var elem = sheets[i];
+            var parent = elem.parentElement || head;
+            parent.removeChild(elem);
+            var rel = elem.rel;
+            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+            }
+            parent.appendChild(elem);
+          }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function (msg) {
+          if (msg.data == 'reload') window.location.reload();
+          else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+          console.log('Live reload enabled.');
+          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+      })();
+    }
+    else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+    
+  </script>
+
+  
+  <script type="text/javascript">
+  
     if ('WebSocket' in window) {
       (function () {
         function refreshCSS() {
@@ -424,9 +461,8 @@
     // ]]>
   </script>
 
-  <!-- Code injected by live-server -->
   <script type="text/javascript">
-    // <![CDATA[  <-- For SVG support
+    
     if ('WebSocket' in window) {
       (function () {
         function refreshCSS() {
@@ -460,12 +496,12 @@
     else {
       console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
     }
-    // ]]>
+    
   </script>
 
-  <!-- Code injected by live-server -->
+ 
   <script type="text/javascript">
-    // <![CDATA[  <-- For SVG support
+    
     if ('WebSocket' in window) {
       (function () {
         function refreshCSS() {
@@ -499,46 +535,7 @@
     else {
       console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
     }
-    // ]]>
-  </script>
-
-  <!-- Code injected by live-server -->
-  <script type="text/javascript">
-    // <![CDATA[  <-- For SVG support
-    if ('WebSocket' in window) {
-      (function () {
-        function refreshCSS() {
-          var sheets = [].slice.call(document.getElementsByTagName("link"));
-          var head = document.getElementsByTagName("head")[0];
-          for (var i = 0; i < sheets.length; ++i) {
-            var elem = sheets[i];
-            var parent = elem.parentElement || head;
-            parent.removeChild(elem);
-            var rel = elem.rel;
-            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-            }
-            parent.appendChild(elem);
-          }
-        }
-        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-        var address = protocol + window.location.host + window.location.pathname + '/ws';
-        var socket = new WebSocket(address);
-        socket.onmessage = function (msg) {
-          if (msg.data == 'reload') window.location.reload();
-          else if (msg.data == 'refreshcss') refreshCSS();
-        };
-        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-          console.log('Live reload enabled.');
-          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-        }
-      })();
-    }
-    else {
-      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-    }
-    // ]]>
+  
   </script>
 
 </body>
