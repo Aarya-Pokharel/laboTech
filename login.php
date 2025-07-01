@@ -18,7 +18,7 @@ if(isset($_SESSION['admin'])){
     Login page | Labo Test
   </title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/webp" href="assets/newlohonobg.png" >
+  <link rel="icon" type="image/webp" href="assets/logo.png" >
 
 </head>
 
@@ -37,7 +37,7 @@ if(isset($_SESSION['admin'])){
     
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
       <a href="index.html">
-        <img class="mx-auto h-10 w-auto cursor-pointer" src="assets/newlohonobg.png" alt="Your Company" style="height: 200px;">
+        <img class="mx-auto h-10 w-auto cursor-pointer" src="assets/logo.png" alt="Your Company" style="height: 200px;">
 
       </a>
       <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900" style="margin-top: -23px;">Sign in to your account</h2>
