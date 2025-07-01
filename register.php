@@ -7,7 +7,7 @@ require_once 'includes/category-mapping.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | LaboTech</title>
+    <title>Register | TourMate</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/webp" href="assets/logo_without_bg.png">
     <link rel="stylesheet" href="main.css">
@@ -28,13 +28,13 @@ require_once 'includes/category-mapping.php';
         <div class="max-w-md w-full space-y-8">
             <div>
                 <a href="index.html">
-                    <img style="height: 148px;"class="mx-auto h-16 w-auto cursor-pointer" src="assets/logo_without_bg.png" alt="LaboTech">
+                    <img style="height: 148px;"class="mx-auto h-16 w-auto cursor-pointer" src="assets/logo_without_bg.png" alt="TourMate">
                 </a>
                 <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
                     Create your account
                 </h2>
                 <p class="mt-2 text-center text-sm text-gray-600">
-                    Join LaboTech and connect with skilled professionals
+                    Join TourMate and connect with skilled professionals
                 </p>
             </div>
 

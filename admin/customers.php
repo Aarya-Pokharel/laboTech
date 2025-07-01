@@ -34,7 +34,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Management | LaboTech Admin</title>
+    <title>Customer Management | TourMate Admin</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/webp" href="../assets/logo_without_bg.png">
 </head>
@@ -45,8 +45,8 @@ try {
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <img src="../assets/logo_without_bg.png" alt="LaboTech" class="h-8 w-auto">
-                    <span class="ml-2 text-xl font-bold text-gray-900">LaboTech Admin</span>
+                    <img src="../assets/logo_without_bg.png" alt="TourMate" class="h-8 w-auto">
+                    <span class="ml-2 text-xl font-bold text-gray-900">TourMate Admin</span>
                 </div>
                 <div class="flex items-center space-x-4">
                     <span class="text-gray-700">Welcome, <?php echo htmlspecialchars($_SESSION['admin_name']); ?></span>
