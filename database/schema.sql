@@ -1,6 +1,6 @@
 
-CREATE DATABASE IF NOT EXISTS labotech_db;
-USE labotech_db;
+CREATE DATABASE IF NOT EXISTS tourmate;
+USE tourmate;
 
 
 CREATE TABLE IF NOT EXISTS admins (
