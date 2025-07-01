@@ -1,16 +1,29 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
 
-try {
-  $conn = new PDO("mysql:host=$servername;dbname=tourmate", $username, $password);
-
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected successfully";
-} catch(PDOException $e) {
-  echo "Connection failed: " . $e->getMessage();
+Class Database{
+	private $server = "mysql:host=localhost;dbname=tourate";
+	private $username = "root";
+	private $password = "";
+	protected $conn;
+	
+	public function open(){
+ 		try{
+ 			$this->conn = new PDO($this->server, $this->username, $this->password);
+ 			return $this->conn;
+ 		}
+ 		catch (PDOException $e){
+ 			$_SESSION['error']= "There is some problem in connection: " . $e->getMessage();
+  
+ 		}
+ 
+    }
+ 
+	public function close(){
+   		$this->conn = null;
+ 	}
+ 
 }
 
-
+$pdo = new Database();
+ 
 ?>
