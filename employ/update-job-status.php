@@ -4,19 +4,18 @@ header('Content-Type: application/json');
 
 require_once '../includes/db.php';
 
-// Check if employee is logged in
 if (!isset($_SESSION['employ'])) {
     echo json_encode(['success' => false, 'message' => 'Not authenticated']);
     exit();
 }
 
-// Check if it's a POST request
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo json_encode(['success' => false, 'message' => 'Invalid request method']);
     exit();
 }
 
-// Get JSON input
+
 $input = json_decode(file_get_contents('php://input'), true);
 
 if (!$input || !isset($input['job_id']) || !isset($input['status'])) {
@@ -28,7 +27,7 @@ $jobId = $input['job_id'];
 $status = $input['status'];
 $employeeId = $_SESSION['employ'];
 
-// Validate status
+
 $allowedStatuses = ['active', 'completed', 'cancelled'];
 if (!in_array($status, $allowedStatuses)) {
     echo json_encode(['success' => false, 'message' => 'Invalid status']);
@@ -39,7 +38,7 @@ try {
     $pdo = new Database();
     $conn = $pdo->open();
     
-    // Check if job exists and is assigned to this employee
+    
     $stmt = $conn->prepare("SELECT * FROM jobs WHERE id = ? AND employee_id = ?");
     $stmt->execute([$jobId, $employeeId]);
     $job = $stmt->fetch();
@@ -49,11 +48,11 @@ try {
         exit();
     }
     
-    // Update job status
+  
     $stmt = $conn->prepare("UPDATE jobs SET status = ?, updated_at = NOW() WHERE id = ?");
     $stmt->execute([$status, $jobId]);
     
-    // If job is completed, create a payment record
+ 
     if ($status === 'completed') {
         $stmt = $conn->prepare("INSERT INTO payments (job_id, employee_id, customer_id, amount, status, created_at) 
                                VALUES (?, ?, ?, ?, 'completed', NOW())");
