@@ -28,7 +28,7 @@ require_once 'includes/category-mapping.php';
         <div class="max-w-md w-full space-y-8">
             <div>
                 <a href="index.html">
-                    <img class="mx-auto h-16 w-auto cursor-pointer" src="assets/logo_without_bg.png" alt="LaboTech">
+                    <img style="height: 148px;"class="mx-auto h-16 w-auto cursor-pointer" src="assets/logo_without_bg.png" alt="LaboTech">
                 </a>
                 <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
                     Create your account
@@ -131,8 +131,8 @@ require_once 'includes/category-mapping.php';
                         <div class="text-sm text-gray-500 mb-2">Select the job categories you can work on:</div>
                         <div class="grid grid-cols-2 gap-2 max-h-48 overflow-y-auto border border-gray-300 rounded-lg p-3">
                             <label class="flex items-center space-x-2">
-                                <input type="checkbox" name="job_categories[]" value="Plumbing" class="rounded" required>
-                                <span class="text-sm">Plumbing</span>
+                                <input type="checkbox" name="job_categories[]" value="Tourist Guide" class="rounded" required>
+                                <span class="text-sm">Tourist Guide</span>
                             </label>
                             <label class="flex items-center space-x-2">
                                 <input type="checkbox" name="job_categories[]" value="Electrical" class="rounded">
@@ -155,8 +155,8 @@ require_once 'includes/category-mapping.php';
                                 <span class="text-sm">Painting</span>
                             </label>
                             <label class="flex items-center space-x-2">
-                                <input type="checkbox" name="job_categories[]" value="Moving" class="rounded">
-                                <span class="text-sm">Moving</span>
+                                <input type="checkbox" name="job_categories[]" value="Explorer" class="rounded">
+                                <span class="text-sm">Explorer</span>
                             </label>
                             <label class="flex items-center space-x-2">
                                 <input type="checkbox" name="job_categories[]" value="Repair" class="rounded">
@@ -292,8 +292,8 @@ require_once 'includes/category-mapping.php';
     <script>
       
         const categoryMapping = {
-            'Unskilled Labor': ['Cleaning', 'Moving', 'Gardening', 'Driving', 'Security'],
-            'Skilled Labor': ['Plumbing', 'Electrical', 'Carpentry', 'Painting', 'Repair', 'Installation', 'Cooking'],
+            'Unskilled Labor': ['Cleaning', 'Explorer', 'Gardening', 'Driving', 'Security'],
+            'Skilled Labor': ['Tourist Guide', 'Electrical', 'Carpentry', 'Painting', 'Repair', 'Installation', 'Cooking'],
             'Technical': ['IT Support', 'Web Development', 'Graphic Design'],
             'Professional': ['Consulting', 'Legal Services', 'Medical Services', 'Teaching']
         };

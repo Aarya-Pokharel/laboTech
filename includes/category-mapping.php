@@ -2,23 +2,27 @@
 
 class CategoryMapping {
     
-    // Employee categories from database
+   
     const EMPLOYEE_CATEGORIES = [
         'Unskilled Labor',
         'Skilled Labor', 
         'Technical',
         'Professional'
+        
     ];
     
-    // Job categories that customers can post
+    
     const JOB_CATEGORIES = [
-        'Plumbing',
+        'Local',
+        'Explorer',
+        'Tourist Guide',
+        
         'Electrical',
         'Carpentry',
         'Cleaning',
         'Gardening',
         'Painting',
-        'Moving',
+        'Explorer',
         'Repair',
         'Installation',
         'Cooking',
@@ -31,20 +35,25 @@ class CategoryMapping {
         'Legal Services',
         'Medical Services',
         'Teaching',
-        'Other'
+        'Other',
+        
     ];
     
-    // Mapping from job categories to employee categories
+    
     const CATEGORY_MAPPING = [
-        // Unskilled Labor jobs
+
+        'Local' => 'Professional',
+        'Explorer'=> 'Professional',
+      
+        'Tourist Guide'=> 'Professional',
+       
         'Cleaning' => 'Unskilled Labor',
-        'Moving' => 'Unskilled Labor',
+        'Explorer' => 'Unskilled Labor',
         'Gardening' => 'Unskilled Labor',
         'Driving' => 'Unskilled Labor',
         'Security' => 'Unskilled Labor',
+
         
-        // Skilled Labor jobs
-        'Plumbing' => 'Skilled Labor',
         'Electrical' => 'Skilled Labor',
         'Carpentry' => 'Skilled Labor',
         'Painting' => 'Skilled Labor',
@@ -52,18 +61,18 @@ class CategoryMapping {
         'Installation' => 'Skilled Labor',
         'Cooking' => 'Skilled Labor',
         
-        // Technical jobs
+
         'IT Support' => 'Technical',
         'Web Development' => 'Technical',
         'Graphic Design' => 'Technical',
         
-        // Professional jobs
+
         'Consulting' => 'Professional',
         'Legal Services' => 'Professional',
         'Medical Services' => 'Professional',
         'Teaching' => 'Professional',
         
-        // Default for unknown categories
+        
         'Other' => 'Skilled Labor'
     ];
     
